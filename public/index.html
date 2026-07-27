@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nexus AI - a modern AI chat experience" />
+    <title>Nexus AI</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero-card">
+        <div class="hero-copy">
+          <p class="eyebrow">Production-ready AI assistant</p>
+          <h1>Nexus AI</h1>
+          <p class="subtitle">
+            A modern, secure, and maintainable AI chat experience built with Express and modern JavaScript.
+          </p>
+        </div>
+
+        <div class="chat-panel">
+          <div id="messages" class="messages" aria-live="polite"></div>
+          <form id="chat-form" class="chat-form">
+            <input id="message-input" type="text" placeholder="Ask Nexus AI anything..." autocomplete="off" />
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

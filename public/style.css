@@ -1,0 +1,125 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #07111f;
+  color: #f4f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #13243d 0%, #07111f 70%);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+.hero-card {
+  width: min(1100px, 100%);
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1.1fr 0.9fr;
+  background: rgba(8, 17, 31, 0.86);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #7dd3fc;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin: 0 0 0.8rem;
+}
+
+.subtitle {
+  color: #b8c4d4;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.chat-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: rgba(255,255,255,0.04);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.messages {
+  min-height: 320px;
+  max-height: 420px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding-right: 0.3rem;
+}
+
+.message {
+  padding: 0.8rem 1rem;
+  border-radius: 14px;
+  max-width: 90%;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.message.bot {
+  align-self: flex-start;
+  background: rgba(255,255,255,0.08);
+}
+
+.chat-form {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 0.9rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+
+.chat-form button {
+  border: none;
+  padding: 0.9rem 1.1rem;
+  border-radius: 999px;
+  background: #22c55e;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  .hero-card {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-panel {
+    min-height: 360px;
+  }
+}
