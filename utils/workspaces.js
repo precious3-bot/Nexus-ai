@@ -1,0 +1,152 @@
+const WORKSPACES = [
+  {
+    id: 'general-ai',
+    title: 'General AI',
+    description: 'A polished, all-purpose assistant for strategy, planning, and daily workflows.',
+    accent: '#06b6d4',
+    icon: 'fa-solid fa-brain',
+    symbol: '🧠',
+    systemPrompt: 'You are Nexus AI General Assistant. Provide thoughtful, concise, and professional guidance for general business, creative, and technical tasks. Keep answers clear and actionable.',
+    starterPrompts: [
+      'Summarize my project goals in three bullet points.',
+      'Help me prioritize my next workday with a focused plan.',
+      'Create a brief executive summary for my current initiative.',
+    ],
+  },
+  {
+    id: 'coding-assistant',
+    title: 'Coding Assistant',
+    description: 'A developer-focused workspace for fast code review, debugging, and architecture guidance.',
+    accent: '#2563eb',
+    icon: 'fa-solid fa-code',
+    symbol: '💻',
+    systemPrompt: 'You are Nexus AI Coding Assistant. Help with code, architecture, debugging, and implementation details. Provide examples, best practices, and clear explanations.',
+    starterPrompts: [
+      'Review this JavaScript function and suggest improvements.',
+      'How do I fix this TypeScript type error in my React component?',
+      'Generate a REST API endpoint schema for user authentication.',
+    ],
+  },
+  {
+    id: 'study-assistant',
+    title: 'Study Assistant',
+    description: 'A learning-focused workspace for summaries, flashcards, and study plans.',
+    accent: '#9333ea',
+    icon: 'fa-solid fa-graduation-cap',
+    symbol: '📚',
+    systemPrompt: 'You are Nexus AI Study Assistant. Create concise summaries, study aids, and learning plans that help users retain knowledge quickly and confidently.',
+    starterPrompts: [
+      'Summarize the key concepts of this chapter in three bullet points.',
+      'Create flashcards for the main ideas in this topic.',
+      'Build a one-week study plan for learning data structures.',
+    ],
+  },
+  {
+    id: 'business-assistant',
+    title: 'Business Assistant',
+    description: 'A professional business workspace for market insights, decks, and executive summaries.',
+    accent: '#ea580c',
+    icon: 'fa-solid fa-briefcase',
+    symbol: '💼',
+    systemPrompt: 'You are Nexus AI Business Assistant. Deliver polished, professional recommendations, market insights, and executive-ready outputs for business users.',
+    starterPrompts: [
+      'Draft a short market analysis for a new product launch.',
+      'Create an agenda for a stakeholder update meeting.',
+      'Write a concise business case for investing in customer success.',
+    ],
+  },
+  {
+    id: 'writing-assistant',
+    title: 'Writing Assistant',
+    description: 'A refined writing workspace for copy, editing, and creative storytelling.',
+    accent: '#ec4899',
+    icon: 'fa-solid fa-pen-nib',
+    symbol: '✍️',
+    systemPrompt: 'You are Nexus AI Writing Assistant. Help users craft elegant, engaging, and professional written content with strong clarity and tone.',
+    starterPrompts: [
+      'Rewrite this paragraph to be more concise and persuasive.',
+      'Write an email introducing a new product to customers.',
+      'Help me draft a blog post outline on customer experience.',
+    ],
+  },
+  {
+    id: 'research-assistant',
+    title: 'Research Assistant',
+    description: 'A depth-oriented workspace for analysis, evidence gathering, and synthesis.',
+    accent: '#0ea5e9',
+    icon: 'fa-solid fa-flask',
+    symbol: '🔬',
+    systemPrompt: 'You are Nexus AI Research Assistant. Provide well-structured research summaries, evidence-based recommendations, and objective comparisons.',
+    starterPrompts: [
+      'Summarize the latest findings on remote work productivity.',
+      'Compare these two technologies and highlight the tradeoffs.',
+      'List the top sources I should review for this topic.',
+    ],
+  },
+  {
+    id: 'data-analysis-assistant',
+    title: 'Data Analysis Assistant',
+    description: 'A data-focused workspace for insights, charts, and analytic explanations.',
+    accent: '#14b8a6',
+    icon: 'fa-solid fa-chart-simple',
+    symbol: '📊',
+    systemPrompt: 'You are Nexus AI Data Analysis Assistant. Help users interpret data, identify trends, and produce clear analysis with measurable recommendations.',
+    starterPrompts: [
+      'Analyze this dataset and highlight the main trends.',
+      'Explain the difference between correlation and causation in simple terms.',
+      'Create a dashboard outline for tracking sales performance.',
+    ],
+  },
+  {
+    id: 'creative-assistant',
+    title: 'Creative Assistant',
+    description: 'An imaginative workspace for concept development, design direction, and storytelling.',
+    accent: '#f97316',
+    icon: 'fa-solid fa-paintbrush',
+    symbol: '🎨',
+    systemPrompt: 'You are Nexus AI Creative Assistant. Encourage bold ideas, craft compelling narratives, and support creative exploration with vivid examples.',
+    starterPrompts: [
+      'Brainstorm a creative campaign theme for a launch.',
+      'Write a short brand story for a new lifestyle product.',
+      'Generate a set of visual mood keywords for a creative brief.',
+    ],
+  },
+  {
+    id: 'translation-assistant',
+    title: 'Translation Assistant',
+    description: 'A global workspace for translation, localization, and multilingual clarity.',
+    accent: '#22c55e',
+    icon: 'fa-solid fa-globe',
+    symbol: '🌍',
+    systemPrompt: 'You are Nexus AI Translation Assistant. Translate and localize content accurately while preserving tone, context, and readability.',
+    starterPrompts: [
+      'Translate this paragraph into professional English.',
+      'Localize this email for a European audience.',
+      'Explain this concept in simple language for global teams.',
+    ],
+  },
+];
+
+export function getWorkspaces() {
+  return WORKSPACES;
+}
+
+export function getWorkspaceMetadata() {
+  return WORKSPACES.map(({ id, title, description, accent, symbol, icon, starterPrompts }) => ({
+    id,
+    title,
+    description,
+    accent,
+    symbol,
+    icon,
+    starterPrompts,
+  }));
+}
+
+export function getWorkspaceById(workspaceId) {
+  return WORKSPACES.find((workspace) => workspace.id === workspaceId) || null;
+}
+
+export function getWorkspaceIds() {
+  return WORKSPACES.map((workspace) => workspace.id);
+}

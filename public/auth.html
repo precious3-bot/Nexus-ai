@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus AI Auth</title>
+    <link rel="stylesheet" href="/auth.css" />
+  </head>
+  <body>
+    <main class="auth-shell">
+      <section class="auth-card" id="auth-card">
+        <h1 id="auth-title">Welcome back</h1>
+        <p id="auth-subtitle">Sign in to continue to Nexus AI.</p>
+        <form id="auth-form" class="auth-form">
+          <label id="fullName-wrap" hidden>
+            <span>Full Name</span>
+            <input id="fullName" name="fullName" type="text" placeholder="Alex Carter" />
+          </label>
+          <label>
+            <span id="identifier-label">Email</span>
+            <input id="email" name="identifier" type="text" placeholder="username or you@example.com" required />
+          </label>
+          <label id="username-wrap" hidden>
+            <span>Username</span>
+            <input id="username" name="username" type="text" placeholder="alex" />
+          </label>
+          <label>
+            <span>Password</span>
+            <input id="password" name="password" type="password" placeholder="••••••••" required />
+          </label>
+          <label id="confirm-wrap" hidden>
+            <span>Confirm Password</span>
+            <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm password" />
+          </label>
+          <div class="auth-link-row">
+            <label id="remember-wrap" style="display:flex;align-items:center;gap:0.4rem;">
+              <input id="rememberMe" name="rememberMe" type="checkbox" />
+              <span>Remember me</span>
+            </label>
+            <a id="toggle-link" href="/auth.html?mode=signup">Create account</a>
+          </div>
+          <button class="auth-btn" type="submit" id="auth-submit">Sign in</button>
+          <div id="auth-message" class="auth-message"></div>
+        </form>
+        <div class="auth-footer">
+          <a id="secondary-link" href="/auth.html">Forgot password?</a>
+        </div>
+      </section>
+    </main>
+    <script src="/auth.js"></script>
+  </body>
+</html>

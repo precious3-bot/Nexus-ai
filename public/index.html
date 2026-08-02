@@ -3,31 +3,521 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Nexus AI - a modern AI chat experience" />
-    <title>Nexus AI</title>
+    <meta name="description" content="Nexus AI delivers a premium, secure, and intelligent workspace for modern teams." />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta property="og:title" content="Nexus AI | Intelligence Without Limits" />
+    <meta property="og:description" content="Discover a futuristic AI experience designed for research, creativity, and execution." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/icons/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nexus AI | Intelligence Without Limits" />
+    <meta name="twitter:description" content="Premium AI productivity for ambitious teams." />
+    <meta name="twitter:image" content="/icons/og-image.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Nexus AI",
+        "url": "https://example.com",
+        "description": "A premium AI assistant workspace for research, creativity, and execution.",
+        "applicationCategory": "ProductivityApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "19",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+    <title>Nexus AI | Intelligence Without Limits</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230F172A'/%3E%3Cpath d='M18 20h28l-6 10 6 10H18l6-10-6-10z' fill='%2306B6D4'/%3E%3C/svg%3E" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/workspace-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   </head>
   <body>
-    <main class="app-shell">
-      <section class="hero-card">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="background-layer" aria-hidden="true">
+      <div class="orb orb-one"></div>
+      <div class="orb orb-two"></div>
+      <div class="orb orb-three"></div>
+      <div class="grid-overlay"></div>
+      <div id="particles" class="particles"></div>
+    </div>
+
+    <header class="site-header">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="#top">
+          <span class="brand-mark"></span>
+          <span>Nexus AI</span>
+        </a>
+        <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How it Works</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="#workspace-selector">Workspaces</a>
+          <a class="nav-cta" href="#contact">Request Demo</a>
+        </div>
+      </nav>
+    </header>
+
+    <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+    <div id="workspace-drawer-overlay" class="workspace-drawer-overlay"></div>
+    <main id="main-content">
+      <section class="hero container reveal" id="top">
         <div class="hero-copy">
-          <p class="eyebrow">Production-ready AI assistant</p>
-          <h1>Nexus AI</h1>
-          <p class="subtitle">
-            A modern, secure, and maintainable AI chat experience built with Express and modern JavaScript.
+          <p class="eyebrow">Intelligence Without Limits</p>
+          <h1>Elevate every workflow with a premium AI companion.</h1>
+          <p class="hero-description">
+            Nexus AI blends research, creativity, and execution into one elegant workspace built for founders, product teams, and knowledge workers.
           </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#chat-demo">Try Live Demo</a>
+            <a class="btn btn-secondary" href="#pricing">Explore Pricing</a>
+          </div>
+          <ul class="hero-highlights" aria-label="Product highlights">
+            <li><i class="fa-solid fa-shield-halved"></i> Secure by design</li>
+            <li><i class="fa-solid fa-bolt"></i> Lightning-fast responses</li>
+            <li><i class="fa-solid fa-sparkles"></i> Beautiful, context-aware assistance</li>
+          </ul>
         </div>
 
-        <div class="chat-panel">
-          <div id="messages" class="messages" aria-live="polite"></div>
-          <form id="chat-form" class="chat-form">
-            <input id="message-input" type="text" placeholder="Ask Nexus AI anything..." autocomplete="off" />
-            <button type="submit">Send</button>
+        <div class="hero-panel glass-card">
+          <div class="panel-badge">
+            <i class="fa-solid fa-robot"></i>
+            Live intelligence workspace
+          </div>
+          <div class="mini-stat-grid">
+            <div>
+              <strong>98%</strong>
+              <span>task completion</span>
+            </div>
+            <div>
+              <strong>24/7</strong>
+              <span>always-on support</span>
+            </div>
+            <div>
+              <strong>4.9/5</strong>
+              <span>team satisfaction</span>
+            </div>
+          </div>
+          <div class="mini-response">
+            <p>“Nexus AI translated our roadmap into crisp action items in seconds.”</p>
+            <span>— Product design lead</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="chat-showcase container reveal" id="chat-demo">
+        <div class="section-heading">
+          <p class="eyebrow">Interactive experience</p>
+          <h2>Experience the future of conversational AI.</h2>
+          <p>Explore a polished workspace with multi-chat history, rapid responses, export tools, and a delightful interface for everyday work.</p>
+        </div>
+
+        <div class="assistant-shell glass-card">
+          <aside class="conversation-sidebar" aria-label="Conversation history">
+            <div class="sidebar-header">
+              <div>
+                <p class="eyebrow">Workspace</p>
+                <h3>Conversations</h3>
+              </div>
+              <div class="sidebar-header-actions">
+                <button id="new-chat" class="icon-btn icon-btn-small" type="button" aria-label="Create a new conversation">
+                  <i class="fa-solid fa-plus"></i>
+                  New chat
+                </button>
+                <button id="logout-button" class="icon-btn icon-btn-small" type="button" aria-label="Sign out">
+                  <i class="fa-solid fa-right-from-bracket"></i>
+                  Logout
+                </button>
+              </div>
+            </div>
+
+            <label class="sr-only" for="conversation-search">Search conversations</label>
+            <input id="conversation-search" class="sidebar-search" type="search" placeholder="Search chats" />
+
+            <div class="sidebar-actions">
+              <button id="theme-toggle" class="icon-btn icon-btn-small" type="button" aria-label="Toggle theme">
+                <i class="fa-solid fa-moon"></i>
+                Theme
+              </button>
+            </div>
+
+            <div id="workspace-selector" class="workspace-selector" aria-label="Workspace selector">
+              <div class="workspace-header">
+                <div>
+                  <p class="eyebrow">Workspace</p>
+                  <h3 class="workspace-selector-title">Workspaces</h3>
+                </div>
+              </div>
+              <div id="workspace-list" class="workspace-list" role="listbox" aria-label="Available workspaces"></div>
+            </div>
+
+            <ul id="conversation-list" class="conversation-list" role="listbox" aria-label="Previous conversations"></ul>
+          </aside>
+
+          <section class="chat-workspace" aria-label="Chat workspace">
+            <div id="workspace-panel" class="workspace-panel" aria-label="Workspace details">
+              <div class="workspace-meta">
+                <div>
+                  <h3 id="workspace-active-title">General AI</h3>
+                  <p id="workspace-active-description">A polished, all-purpose assistant for strategy, planning, and daily workflows.</p>
+                </div>
+              </div>
+              <div>
+                <p class="eyebrow">Starter prompts</p>
+                <div id="workspace-starters" class="workspace-starters"></div>
+              </div>
+            </div>
+            <div class="chat-header">
+              <div class="chat-title-group">
+                <button id="workspace-drawer-toggle" class="icon-btn icon-btn-circle workspace-drawer-toggle" type="button" aria-label="Open workspace navigation">
+                  <i class="fa-solid fa-layer-group"></i>
+                </button>
+                <div>
+                  <div class="connection-row">
+                    <span id="connection-status" class="status-pill online">● Online</span>
+                    <span id="thinking-indicator" class="status-pill muted" hidden>Thinking…</span>
+                  </div>
+                  <h3 id="active-chat-title">Nexus Copilot</h3>
+                  <p id="chat-subtitle">Your secure AI assistant workspace</p>
+                </div>
+              </div>
+              <div class="chat-top-actions">
+                <button id="focus-search" class="icon-btn icon-btn-circle" type="button" aria-label="Search conversations">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button id="scroll-to-bottom" class="icon-btn icon-btn-circle" type="button" aria-label="Scroll to latest message">
+                  <i class="fa-solid fa-arrow-down"></i>
+                </button>
+                <button id="stop-chat" class="icon-btn icon-btn-circle" type="button" aria-label="Stop generation" hidden>
+                  <i class="fa-solid fa-stop"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="chat-toolbar">
+              <div class="mode-panel">
+                <span class="mode-label">AI Mode</span>
+                <div id="mode-selector" class="mode-selector" role="group" aria-label="AI mode selector"></div>
+              </div>
+              <div class="toolbar-summary">
+                <span>Use a mode for faster, more creative, or more precise responses.</span>
+              </div>
+            </div>
+
+            <div id="messages" class="messages" role="log" aria-live="polite"></div>
+
+            <div class="composer-panel">
+              <div class="composer-card">
+                <div class="composer-header">
+                  <div class="composer-tools" role="toolbar" aria-label="Composer tools">
+                    <button class="tool-btn" type="button" data-tool="file" aria-label="Attach files">
+                      <i class="fa-solid fa-paperclip"></i>
+                    </button>
+                    <button class="tool-btn" type="button" data-tool="image" aria-label="Upload image">
+                      <i class="fa-solid fa-image"></i>
+                    </button>
+                    <button class="tool-btn" type="button" data-tool="voice" aria-label="Voice input">
+                      <i class="fa-solid fa-microphone"></i>
+                    </button>
+                    <button class="tool-btn tool-btn-more" type="button" data-tool="more" aria-label="More tools">
+                      <i class="fa-solid fa-plus"></i>
+                    </button>
+                  </div>
+                  <div class="composer-status-actions">
+                    <button id="retry-last" class="icon-btn icon-btn-circle" type="button" aria-label="Regenerate response">
+                      <i class="fa-solid fa-rotate-right"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div id="composer-tools-menu" class="composer-tools-menu" hidden>
+                  <button type="button" class="tool-menu-item" data-action="image">
+                    <i class="fa-solid fa-image"></i>
+                    <span>Upload Image</span>
+                  </button>
+                  <button type="button" class="tool-menu-item" data-action="file">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <span>Upload File</span>
+                  </button>
+                  <button type="button" class="tool-menu-item" data-action="voice">
+                    <i class="fa-solid fa-microphone"></i>
+                    <span>Voice Input</span>
+                  </button>
+                  <button type="button" class="tool-menu-item" data-action="screen">
+                    <i class="fa-solid fa-display"></i>
+                    <span>Screen Capture</span>
+                  </button>
+                  <button type="button" class="tool-menu-item" data-action="ocr">
+                    <i class="fa-solid fa-eye"></i>
+                    <span>OCR</span>
+                  </button>
+                  <button type="button" class="tool-menu-item" data-action="translate">
+                    <i class="fa-solid fa-language"></i>
+                    <span>Translate</span>
+                  </button>
+                </div>
+
+                <div id="voice-panel" class="voice-panel" hidden>
+                  <div class="voice-panel-copy">
+                    <p class="voice-panel-title">Voice ready</p>
+                    <p class="voice-panel-subtitle">Record, pause, and review voice prompts from the same composer.</p>
+                  </div>
+                  <div class="voice-actions">
+                    <button type="button" class="voice-action" data-voice-state="record">
+                      <i class="fa-solid fa-circle"></i>
+                      <span>Record</span>
+                    </button>
+                    <button type="button" class="voice-action" data-voice-state="pause">
+                      <i class="fa-solid fa-pause"></i>
+                      <span>Pause</span>
+                    </button>
+                    <button type="button" class="voice-action" data-voice-state="resume">
+                      <i class="fa-solid fa-play"></i>
+                      <span>Resume</span>
+                    </button>
+                    <button type="button" class="voice-action" data-voice-state="stop">
+                      <i class="fa-solid fa-stop"></i>
+                      <span>Stop</span>
+                    </button>
+                    <button type="button" class="voice-action" data-voice-state="preview">
+                      <i class="fa-solid fa-volume-high"></i>
+                      <span>Preview</span>
+                    </button>
+                    <button type="button" class="voice-action" data-voice-state="cancel">
+                      <i class="fa-solid fa-xmark"></i>
+                      <span>Cancel</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div id="drop-zone" class="drop-zone">
+                  <i class="fa-solid fa-cloud-arrow-up"></i>
+                  <span>Drag files here or use attach to upload documents, images, and more.</span>
+                </div>
+
+                <input id="image-input" type="file" accept="image/*" multiple hidden />
+                <input id="file-input" type="file" accept=".pdf,.doc,.docx,.txt,.csv,.xlsx,.pptx,image/*" multiple hidden />
+
+                <div id="attachment-list" class="attachment-list" aria-live="polite"></div>
+
+                <form id="chat-form" class="chat-form">
+                  <label class="sr-only" for="message-input">Message Nexus AI</label>
+                  <textarea id="message-input" rows="1" maxlength="5000" placeholder="Ask Nexus AI about strategy, writing, code, or planning..." autocomplete="off"></textarea>
+                  <button id="send-button" class="send-button" type="submit" aria-label="Send message">
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </form>
+                <div class="composer-meta">
+                  <span id="char-counter" class="char-counter">0 / 5000</span>
+                  <span class="helper-text">Press Enter to send · Shift + Enter for a new line</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="features container reveal" id="features">
+        <div class="section-heading">
+          <p class="eyebrow">Powerful capabilities</p>
+          <h2>Everything you need to move faster with confidence.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card glass-card">
+            <i class="fa-solid fa-brain"></i>
+            <h3>Deep reasoning</h3>
+            <p>Turn complex prompts into structured insights with calm, precise responses.</p>
+          </article>
+          <article class="feature-card glass-card">
+            <i class="fa-solid fa-layer-group"></i>
+            <h3>Multimodal workflows</h3>
+            <p>Blend text, code, and planning into one consistent, beautiful experience.</p>
+          </article>
+          <article class="feature-card glass-card">
+            <i class="fa-solid fa-rocket"></i>
+            <h3>Reliable automation</h3>
+            <p>Speed up repetitive tasks while preserving clarity, quality, and trust.</p>
+          </article>
+          <article class="feature-card glass-card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>Executive-ready outputs</h3>
+            <p>Produce polished notes, briefs, and summaries that are ready to share.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="how-it-works container reveal" id="how-it-works">
+        <div class="section-heading">
+          <p class="eyebrow">How it works</p>
+          <h2>From prompt to polished outcome in three simple steps.</h2>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card glass-card">
+            <span>01</span>
+            <h3>Share your context</h3>
+            <p>Describe your goal, constraints, and desired outcome with a simple prompt.</p>
+          </article>
+          <article class="step-card glass-card">
+            <span>02</span>
+            <h3>Let Nexus think</h3>
+            <p>Our assistant synthesizes ideas, drafts content, and recommends next actions.</p>
+          </article>
+          <article class="step-card glass-card">
+            <span>03</span>
+            <h3>Refine and ship</h3>
+            <p>Iterate with follow-up prompts and export polished results in seconds.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="pricing container reveal" id="pricing">
+        <div class="section-heading">
+          <p class="eyebrow">Flexible plans</p>
+          <h2>Choose the workflow that fits your ambition.</h2>
+        </div>
+        <div class="pricing-grid">
+          <article class="pricing-card glass-card">
+            <h3>Starter</h3>
+            <p class="price">$19<span>/mo</span></p>
+            <ul>
+              <li>Unlimited basic chats</li>
+              <li>Priority onboarding</li>
+              <li>Community support</li>
+            </ul>
+            <a class="btn btn-secondary" href="#contact">Get Started</a>
+          </article>
+          <article class="pricing-card featured glass-card">
+            <div class="pill">Most Popular</div>
+            <h3>Pro</h3>
+            <p class="price">$79<span>/mo</span></p>
+            <ul>
+              <li>Advanced reasoning</li>
+              <li>Team collaboration</li>
+              <li>Deep project memory</li>
+            </ul>
+            <a class="btn btn-primary" href="#contact">Start Pro</a>
+          </article>
+          <article class="pricing-card glass-card">
+            <h3>Enterprise</h3>
+            <p class="price">Custom</p>
+            <ul>
+              <li>Single-tenant security</li>
+              <li>Custom integrations</li>
+              <li>Dedicated success team</li>
+            </ul>
+            <a class="btn btn-secondary" href="#contact">Book a Call</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="testimonials container reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Loved by teams</p>
+          <h2>Trusted by operators building the next wave of products.</h2>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial-card glass-card">
+            <p>“Nexus AI feels like a calm, intelligent teammate that never misses a detail.”</p>
+            <strong>Amira K.</strong>
+            <span>Founder, Northstar Labs</span>
+          </article>
+          <article class="testimonial-card glass-card">
+            <p>“It helped our team move from scattered ideas to polished execution overnight.”</p>
+            <strong>David P.</strong>
+            <span>Head of Product, Lumen</span>
+          </article>
+          <article class="testimonial-card glass-card">
+            <p>“The interface is gorgeous, and the responses are consistently useful.”</p>
+            <strong>Jules M.</strong>
+            <span>Principal Strategist, Arc Studio</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="faq container reveal" id="faq">
+        <div class="section-heading">
+          <p class="eyebrow">Questions answered</p>
+          <h2>Everything you want to know before you get started.</h2>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item glass-card">
+            <button class="faq-question" type="button" aria-expanded="false">
+              What makes Nexus AI different?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>It combines a premium experience, thoughtful context handling, and a team-ready interface designed for serious work.</p>
+            </div>
+          </article>
+          <article class="faq-item glass-card">
+            <button class="faq-question" type="button" aria-expanded="false">
+              Can I use it for product and creative teams?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Nexus AI supports research, writing, planning, and communication across technical and creative workflows.</p>
+            </div>
+          </article>
+          <article class="faq-item glass-card">
+            <button class="faq-question" type="button" aria-expanded="false">
+              Is my data secure?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Security is part of the core experience, with privacy-first defaults and a strong foundation for enterprise adoption.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact container reveal" id="contact">
+        <div class="contact-card glass-card">
+          <div>
+            <p class="eyebrow">Let’s build together</p>
+            <h2>Bring a premium AI experience to your team.</h2>
+            <p>Whether you need a polished frontend, an internal assistant, or a custom knowledge workspace, Nexus AI is ready to adapt.</p>
+          </div>
+          <form class="contact-form">
+            <label class="sr-only" for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name" />
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" type="email" placeholder="Work email" />
+            <button type="submit" class="btn btn-primary">Request a Demo</button>
           </form>
         </div>
       </section>
     </main>
 
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© <span id="year"></span> Nexus AI. Intelligence Without Limits.</p>
+        <div class="social-links" aria-label="Social links">
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.11/purify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" />
     <script src="/script.js"></script>
   </body>
 </html>

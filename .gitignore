@@ -141,3 +141,398 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+You are a Principal Full-Stack Engineer, AI Systems Architect, Security Engineer, and Senior UI/UX Designer.
+
+Your task is to evolve the existing Nexus AI project into a premium, production-ready AI productivity platform while preserving every working feature.
+
+## CORE OBJECTIVES
+
+Do NOT rebuild the project from scratch.
+
+Instead:
+
+- Preserve the existing architecture.
+- Preserve all Gemini API functionality.
+- Preserve authentication.
+- Preserve chat functionality.
+- Preserve responsiveness.
+- Preserve routing.
+- Improve the application with clean, modular, scalable production-quality code.
+
+Avoid duplicate code.
+
+Follow modern software engineering best practices.
+
+--------------------------------------------
+1. AUTHENTICATION IMPROVEMENTS
+--------------------------------------------
+
+Simplify the login experience.
+
+The Login page should contain ONLY:
+
+• Username or Email
+• Password
+
+The first field must accept either:
+
+- Username
+OR
+- Email
+
+The backend should automatically determine which one was entered and authenticate using the same endpoint.
+
+Keep:
+
+• Remember Me
+• Forgot Password
+• Create Account
+
+Do NOT modify the registration process.
+
+Registration should continue collecting:
+
+- Full Name
+- Username
+- Email
+- Password
+- Existing required fields
+
+Maintain:
+
+- Session persistence
+- Secure authentication
+- Protected routes
+- Existing AI functionality
+
+--------------------------------------------
+2. AI WORKSPACES
+--------------------------------------------
+
+Replace the generic AI experience with intelligent workspaces.
+
+There should NOT be a popup saying:
+
+"Select Workspace"
+
+or
+
+"Choose Workspace"
+
+Instead, permanently display all workspaces inside the application navigation.
+
+Desktop:
+Left Sidebar
+
+Tablet:
+Navigation Drawer
+
+Mobile:
+Navigation Drawer or Bottom Navigation
+
+Available Workspaces
+
+🧠 General AI
+
+💻 Coding Assistant
+
+📚 Study Assistant
+
+💼 Business Assistant
+
+✍️ Writing Assistant
+
+🔬 Research Assistant
+
+📊 Data Analysis Assistant
+
+🎨 Creative Assistant
+
+🌍 Translation Assistant
+
+--------------------------------------------
+3. WORKSPACE EXPERIENCE
+--------------------------------------------
+
+Each workspace should have:
+
+• Professional icon
+
+• Name
+
+• Short overview
+
+• Dedicated hidden system prompt
+
+• Suggested starter prompts
+
+• Independent conversation history
+
+• Unique personality
+
+• Shared chat interface
+
+Clicking a workspace should:
+
+• Instantly activate it
+
+• Highlight it
+
+• Switch AI behaviour
+
+• Keep the same page
+
+• Never reload
+
+• Never ask for confirmation
+
+• Remember the last workspace
+
+• Restore it automatically after login
+
+--------------------------------------------
+4. SYSTEM PROMPTS
+--------------------------------------------
+
+Every workspace should use its own internal system prompt.
+
+The system prompt MUST NEVER be visible to users.
+
+Users must NOT be able to:
+
+• View it
+
+• Copy it
+
+• Export it
+
+• Inspect it
+
+• Retrieve it
+
+Instead, show a short overview describing what that workspace can do.
+
+Example:
+
+Coding Assistant
+
+"Write, explain, debug and optimize software across multiple programming languages."
+
+Business Assistant
+
+"Generate business plans, marketing strategies, SWOT analyses and professional business documents."
+
+Study Assistant
+
+"Create lesson notes, quizzes, flashcards and revision plans."
+
+When a workspace is selected:
+
+Automatically prepend the hidden system prompt before every Gemini request.
+
+The user should never notice this process.
+
+--------------------------------------------
+5. CHAT EXPERIENCE
+--------------------------------------------
+
+Preserve every existing feature.
+
+Improve where necessary.
+
+Support:
+
+✓ Markdown
+
+✓ Syntax highlighting
+
+✓ Streaming responses (when available)
+
+✓ Regenerate
+
+✓ Stop Generation
+
+✓ Multiple conversations
+
+✓ Search conversations
+
+✓ Rename conversations
+
+✓ Delete conversations
+
+✓ Export conversations
+
+--------------------------------------------
+6. COPY BUTTON
+--------------------------------------------
+
+Replace every text button saying:
+
+"Copy"
+
+with a professional icon.
+
+Preferred icons:
+
+- Lucide Copy
+
+- Material Design content_copy
+
+- Font Awesome fa-copy
+
+When pressed:
+
+1. Copy the response
+
+2. Animate smoothly
+
+3. Replace the icon with a green checkmark
+
+4. Return to the copy icon after approximately two seconds
+
+Desktop:
+
+Show tooltip:
+
+Copy
+
+Mobile:
+
+No tooltip.
+
+Ensure accessibility and touch-friendly sizing.
+
+--------------------------------------------
+7. RESPONSIVE DESIGN
+--------------------------------------------
+
+The entire application must work perfectly on:
+
+✓ Phones
+
+✓ Tablets
+
+✓ Laptops
+
+✓ Desktop Monitors
+
+Requirements:
+
+No overlapping UI
+
+No horizontal scrolling
+
+Responsive typography
+
+Flexible layouts
+
+Touch-friendly controls
+
+Consistent spacing
+
+Dark Mode support
+
+Light Mode support
+
+--------------------------------------------
+8. CODE ARCHITECTURE
+--------------------------------------------
+
+Organize the project cleanly.
+
+Separate:
+
+Authentication
+
+Routes
+
+Workspace Configuration
+
+Workspace Prompts
+
+Components
+
+Pages
+
+Utilities
+
+API Services
+
+Styles
+
+Icons
+
+Settings
+
+Future workspaces should be easy to add.
+
+--------------------------------------------
+9. PERFORMANCE
+--------------------------------------------
+
+Optimize for:
+
+Fast startup
+
+Minimal bundle size
+
+Lazy loading where appropriate
+
+Smooth animations
+
+Efficient rendering
+
+Clean state management
+
+Production-quality code
+
+--------------------------------------------
+10. QUALITY ASSURANCE
+--------------------------------------------
+
+Before completion verify:
+
+✓ Username login works
+
+✓ Email login works
+
+✓ Registration works
+
+✓ Logout works
+
+✓ Session persistence works
+
+✓ Protected routes work
+
+✓ Gemini API works
+
+✓ AI chat works
+
+✓ Workspace switching works
+
+✓ Hidden system prompts work
+
+✓ Separate histories work
+
+✓ Copy icon works
+
+✓ No console errors
+
+✓ No routing errors
+
+✓ No broken links
+
+✓ No server errors
+
+✓ Fully responsive
+
+--------------------------------------------
+11. IMPLEMENTATION REPORT
+--------------------------------------------
+
+After implementation provide:
+
+1. Files created
+
+2. Files modifimaa
+Deliver a complete, polished, production-ready implementation with no placeholder code, TODOs, or unfinished features.

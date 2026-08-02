@@ -1,0 +1,92 @@
+{
+  "users": [
+    {
+      "id": "66c59ee8-a7c7-4e4f-89c7-900bd250867e",
+      "fullName": "Test User",
+      "username": "testuser",
+      "email": "test@example.com",
+      "passwordHash": "$2b$12$IfH0ONiIbKufHchBT7H90.taQshNeWUBLKQLupwOivg6Km5uCEWaq",
+      "avatar": "",
+      "createdAt": "2026-07-29T01:53:48.414Z",
+      "updatedAt": "2026-08-01T23:27:08.723Z",
+      "lastLogin": "2026-08-01T23:27:08.723Z",
+      "sessionId": "7bda5e60-c2a5-429d-947c-c86d7e565d23",
+      "settings": {
+        "theme": "system",
+        "workspace": "assistant",
+        "preferredModel": "",
+        "fontSize": "medium",
+        "notifications": true
+      },
+      "conversations": [],
+      "passwordResetTokenHash": null,
+      "passwordResetExpiresAt": null
+    },
+    {
+      "id": "2f90057d-ece9-443c-b79a-607b45eaa1b1",
+      "fullName": "Auth Tester",
+      "username": "authtester",
+      "email": "authtester@example.com",
+      "passwordHash": "$2b$12$yqbCyVYZa/Nj55wokH4IpO3mWjM9RspQJKNp1q8NVLMvo4yGvTYga",
+      "avatar": "",
+      "createdAt": "2026-08-01T00:34:39.999Z",
+      "updatedAt": "2026-08-01T00:34:40.315Z",
+      "lastLogin": "2026-08-01T00:34:40.315Z",
+      "sessionId": "7f2e87ad-4d57-499f-a18d-d79e77a4fe41",
+      "settings": {
+        "theme": "system",
+        "workspace": "assistant",
+        "preferredModel": "",
+        "fontSize": "medium",
+        "notifications": true
+      },
+      "conversations": [],
+      "passwordResetTokenHash": null,
+      "passwordResetExpiresAt": null
+    },
+    {
+      "id": "8f6c6ee9-a979-413d-921c-7671a098693f",
+      "fullName": "Ijagbemi Jeremiah",
+      "username": "jerry2105",
+      "email": "ijagbemijeremiah1234@gmail.com",
+      "passwordHash": "$2b$12$VUrFCoNetjFuNgnkk4I0He4bQCMFV0OWajA.GNNuP/2FcaJTFgQli",
+      "avatar": "",
+      "createdAt": "2026-08-01T00:37:14.782Z",
+      "updatedAt": "2026-08-01T23:28:49.225Z",
+      "lastLogin": "2026-08-01T23:28:49.225Z",
+      "sessionId": "af2874c8-44eb-4916-ab99-657caa43d8af",
+      "settings": {
+        "theme": "system",
+        "workspace": "assistant",
+        "preferredModel": "",
+        "fontSize": "medium",
+        "notifications": true
+      },
+      "conversations": [],
+      "passwordResetTokenHash": null,
+      "passwordResetExpiresAt": null
+    },
+    {
+      "id": "dca00f59-7294-4048-936d-35a8f22d588a",
+      "fullName": "Test User",
+      "username": "testuser1785548048",
+      "email": "testuser1785548048@example.com",
+      "passwordHash": "$2b$12$sOJrl1BtBJvAbWlHiU4pteV5aSGr15WEcaiiUB9.HrFL7wOsemdxy",
+      "avatar": "",
+      "createdAt": "2026-08-01T01:34:09.481Z",
+      "updatedAt": "2026-08-01T01:34:21.982Z",
+      "lastLogin": "2026-08-01T01:34:21.982Z",
+      "sessionId": "48d1165a-c46a-4d0a-a3f9-b2f25838fdad",
+      "settings": {
+        "theme": "system",
+        "workspace": "assistant",
+        "preferredModel": "",
+        "fontSize": "medium",
+        "notifications": true
+      },
+      "conversations": [],
+      "passwordResetTokenHash": null,
+      "passwordResetExpiresAt": null
+    }
+  ]
+}
